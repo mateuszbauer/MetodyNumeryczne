@@ -14,6 +14,7 @@ function y = f2(t)
 end
 
 x = linspace(0, 3.15, 1000);
+
 y1 = f1(x);
 y2 = f2(x);
 
