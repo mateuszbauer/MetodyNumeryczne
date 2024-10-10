@@ -33,17 +33,17 @@ function n = f(A, x)
     n = exp(-0.1 * x) * g(A, x)^2;
 end
 
-
-function sum = calculate_integral(A, x1, x2)
+% Metoda złożona trapezów
+function sum = calculate_integral(A, a, b)
     sum = 0;
-
     delta_x = 0.01;
-    x = x1;
 
-    while x < x2
-        sum = sum + f(A, x) * delta_x;
+    x = a;
+    while x + delta_x < b
+        sum = sum + delta_x/2 * (f(A,x) + f(A, x+delta_x));
         x = x + delta_x;
     end
+
 end
 
 % Funkcja pomocnicza rysująca wykres wielomianu o wspolczynnikach A
