@@ -11,10 +11,10 @@ function n = P(R, i, C)
     n = (R^2 * i^2) / (C+R);
 end
 
-% Błąd względny
+% Błąd bezwzględny
 dP = (R * i^2 * (2*C+R) * dR)/((C+R)^2) + (2 * R^2 * i * di)/(C+R) + (R^2 * i^2 * dC)/((C+R)^2)
 
-% Błąd bezwzględny
+% Błąd względny
 dPw = dP / P(R, i , C)
 
 
